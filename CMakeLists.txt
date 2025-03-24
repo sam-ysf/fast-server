@@ -37,12 +37,8 @@ include_directories(${CMAKE_CURRENT_LIST_DIR}/sample/json/single_include)
 file(GLOB Srcs_top
           sample/*.cpp)
 
-message(BUILD_TESTS="${BUILD_TESTS}")
-
 set(Srcs ${Srcs_top})
 add_executable(${Elf_name} ${Srcs})
-
-install(TARGETS ${Elf_name} DESTINATION /home/sam/.local/bin.sam)
 
 target_link_libraries(${Elf_name} LINK_PUBLIC ncurses)
 target_link_libraries(${Elf_name} LINK_PUBLIC tinfo)
